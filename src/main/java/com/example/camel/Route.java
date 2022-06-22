@@ -20,7 +20,7 @@ public class Route extends RouteBuilder {
     @Override
     public void configure() throws Exception {
         //disabilitare i know hosts &useUserKnownHostsFile=false
-        from("sftp://demo@test.rebex.net:22/?password=dev")
+        from("sftp://demo@test.rebex.net:22/?password=****")
                 .choice()
                 .when(header("CamelFilename").endsWith(".txt"))
                 .process(setFileName)
